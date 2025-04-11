@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 25, 2025 at 11:55 PM
+-- Generation Time: Apr 11, 2025 at 02:16 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -71,7 +71,8 @@ INSERT INTO `customers` (`id`, `name`, `email`, `password`) VALUES
 (8, 'Eve', 'eve@example.com', 'eve'),
 (9, 'joy', 'joy@hotmail.com', 'joytt'),
 (10, 'Holam', 'holam@yahoo.com', 'holam'),
-(11, 'Kutub', 'kutub@yahoo.com', 'kutub');
+(11, 'Kutub', 'kutub@yahoo.com', 'kutub'),
+(13, 'paglu', 'paglu@gmail.com', 'paglu');
 
 -- --------------------------------------------------------
 
@@ -140,9 +141,7 @@ INSERT INTO `orders` (`id`, `customer_id`, `item_id`, `order_date`, `status`, `t
 (24, 3, 1, '2025-03-26 03:04:47', 'Cancelled', 120.00, 'Espresso', 1),
 (28, 3, 9, '2025-03-26 03:12:10', 'Cancelled', 220.00, 'Cheesecake Slice', 1),
 (29, 3, 1, '2025-03-26 03:13:33', 'Cancelled', 120.00, 'Espresso', 1),
-(30, 3, 1, '2025-03-26 03:14:58', 'Completed', 360.00, 'Espresso', 3),
-(31, 2, 6, '2025-03-26 03:51:54', 'Cancelled', 100.00, 'Black Tea', 1),
-(32, 3, 14, '2025-03-26 04:04:30', 'Completed', 180.00, 'French Fries', 1);
+(30, 3, 1, '2025-03-26 03:14:58', 'Completed', 360.00, 'Espresso', 3);
 
 -- --------------------------------------------------------
 
@@ -163,7 +162,7 @@ CREATE TABLE `reservations` (
 
 INSERT INTO `reservations` (`id`, `customer_id`, `reservation_date`, `status`) VALUES
 (1, 2, '2025-03-26 18:30:00', 'Confirmed'),
-(2, 3, '2025-03-27 12:00:00', 'Pending'),
+(2, 3, '2025-03-27 12:00:00', 'Confirmed'),
 (3, 4, '2025-03-28 19:45:00', 'Confirmed'),
 (4, 5, '2025-03-29 14:30:00', 'Cancelled'),
 (5, 6, '2025-03-30 20:15:00', 'Confirmed'),
@@ -189,7 +188,8 @@ CREATE TABLE `staff` (
 INSERT INTO `staff` (`id`, `name`, `role`) VALUES
 (1, 'Johnson', 'Chef'),
 (2, 'Smith', 'Waiter'),
-(3, 'Hola', 'Waiter');
+(3, 'Hola', 'Waiter'),
+(4, 'Shobuj', 'Waiter');
 
 --
 -- Indexes for dumped tables
@@ -250,7 +250,7 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `menu`
@@ -268,13 +268,13 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `reservations`
 --
 ALTER TABLE `reservations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `staff`
 --
 ALTER TABLE `staff`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
